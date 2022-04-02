@@ -1,42 +1,8 @@
 <template>
   <v-container>
     <header-profile :username="username" />
-
-    <v-row class="profile" justify="space-around">
-      <div class="avatar">
-        <v-avatar>
-          <img
-            src="https://avatars.githubusercontent.com/u/3336816?v=4"
-            alt="Ada"
-          />
-        </v-avatar>
-      </div>
-
-      <!-- Post Text-box -->
-      <div class="text-box">
-        <div class="text-center">
-          1,992 <br />
-          Post
-        </div>
-      </div>
-
-      <!-- Follower Text-box -->
-      <div class="text-box">
-        <div class="text-center">
-          2.3M <br />
-          Followers
-        </div>
-      </div>
-
-      <!-- Following Text-box -->
-      <div class="text-box">
-        <div class="text-center">
-          1.5M <br />
-          Following
-        </div>
-      </div>
-    </v-row>
-
+    <profile-image :src="avatarImg" />
+      
     <v-row class="bio">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -75,15 +41,18 @@
 <script>
 import DogImage from "../components/instraComp/DogImage.vue";
 import HeaderProfile from '../components/instraComp/HeaderProfile.vue';
+import ProfileImage from '../components/instraComp/ProfileImage.vue';
 
 export default {
   name: "IndexPage",
   components: {
     DogImage,
     HeaderProfile,
+    ProfileImage
   },
   data: () => ({
     username: "AdaDeSions",
+    avatarImg: "https://avatars.githubusercontent.com/u/3336816?v=4",
   })
 };
 </script>
