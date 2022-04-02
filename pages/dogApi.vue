@@ -2,7 +2,7 @@
   <div class="dog-api-section">
       <v-row>
           <div class="dog-imgs d-flex" v-for="(img, idx) in dogData" :key="idx">
-              <v-img :src="img" max-width="100"></v-img>
+              <v-img class="mr-3 mb-6" :src="img" max-width="150"></v-img>
           </div> 
       </v-row>
   </div>
