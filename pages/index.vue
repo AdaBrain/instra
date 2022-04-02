@@ -67,12 +67,18 @@
         </v-tab>        
       </v-tabs>
     </v-row>
+    <dog-image breed="pomeranian" />
   </v-container>
 </template>
 
 <script>
+import DogImage from "../components/instraComp/DogImage.vue"
+
 export default {
   name: "IndexPage",
+  components: {
+    DogImage,
+  }
 };
 </script>
 
