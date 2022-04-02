@@ -7,7 +7,10 @@
     <v-row class="profile" justify="space-around">
       <div class="avatar">
         <v-avatar>
-          <img src="https://avatars.githubusercontent.com/u/3336816?v=4" alt="Ada" />
+          <img
+            src="https://avatars.githubusercontent.com/u/3336816?v=4"
+            alt="Ada"
+          />
         </v-avatar>
       </div>
 
@@ -61,24 +64,23 @@
           <v-icon>mdi-grid</v-icon>
         </v-tab>
         <v-tab>
-          <v-icon>
-            mdi-tag-heart-outline
-          </v-icon>
-        </v-tab>        
+          <v-icon> mdi-tag-heart-outline </v-icon>
+        </v-tab>
       </v-tabs>
     </v-row>
-    <dog-image breed="pomeranian" />
+
+    <dog-image breed="pomeranian" maxWidth="150" />
   </v-container>
 </template>
 
 <script>
-import DogImage from "../components/instraComp/DogImage.vue"
+import DogImage from "../components/instraComp/DogImage.vue";
 
 export default {
   name: "IndexPage",
   components: {
     DogImage,
-  }
+  },
 };
 </script>
 
