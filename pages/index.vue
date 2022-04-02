@@ -1,8 +1,6 @@
 <template>
   <v-container>
-    <v-row class="border" justify="center">
-      <h3>AdaDeSions</h3>
-    </v-row>
+    <header-profile :username="username" />
 
     <v-row class="profile" justify="space-around">
       <div class="avatar">
@@ -70,17 +68,23 @@
     </v-row>
 
     <dog-image breed="pomeranian" maxWidth="150" />
+
   </v-container>
 </template>
 
 <script>
 import DogImage from "../components/instraComp/DogImage.vue";
+import HeaderProfile from '../components/instraComp/HeaderProfile.vue';
 
 export default {
   name: "IndexPage",
   components: {
     DogImage,
+    HeaderProfile,
   },
+  data: () => ({
+    username: "AdaDeSions",
+  })
 };
 </script>
 
