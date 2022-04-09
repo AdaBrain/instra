@@ -2,18 +2,7 @@
   <v-container>
     <header-profile :username="username" />
     <profile-image :src="avatarImg" />
-      
-    <v-row class="bio">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-    </v-row>
+    <bio-profile :content="bio" />
 
     <v-row class="margin-top" justify="space-around">
       <v-btn elevation="7" large>Follow</v-btn>
@@ -34,11 +23,11 @@
     </v-row>
 
     <dog-image breed="pomeranian" maxWidth="150" />
-
   </v-container>
 </template>
 
 <script>
+import BioProfile from '../components/instraComp/BioProfile.vue';
 import DogImage from "../components/instraComp/DogImage.vue";
 import HeaderProfile from '../components/instraComp/HeaderProfile.vue';
 import ProfileImage from '../components/instraComp/ProfileImage.vue';
@@ -48,11 +37,15 @@ export default {
   components: {
     DogImage,
     HeaderProfile,
-    ProfileImage
+    ProfileImage,
+    BioProfile
   },
   data: () => ({
     username: "AdaDeSions",
     avatarImg: "https://avatars.githubusercontent.com/u/3336816?v=4",
+    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.`
   })
 };
 </script>
@@ -64,12 +57,6 @@ export default {
 
 .profile {
   margin-top: 3em;
-}
-
-.bio {
-  margin-top: 3em;
-  margin-left: 0.7em;
-  font-size: 12px;
 }
 
 .margin-top {
