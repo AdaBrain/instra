@@ -1,12 +1,9 @@
-import { defineStore } from 'pinia';
-
-export const useCounterStore = defineStore({
-    id: 'counter-store',
-    state: () => ({
-        counter: 0,
-    }),
-    actions: {},
-    getters: {
-        counter: state => state.counter
-    }
+export const state = () => ({
+    counter: 0
 })
+
+export const mutations = {
+    increment(state) {
+        state.counter++
+    }
+}
