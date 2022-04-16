@@ -17,14 +17,19 @@ import { mapMutations } from 'vuex'
 
 export default {
   name: "ControlPanel",
+  data() {
+    return {
+      state: this.$store.state,
+    }
+  },
   computed: {
     counter() {
-      return this.$store.state.counter.counter
+      return this.state.counter.counter
     }
   },
   methods: {
     ...mapMutations({
-      add: 'counter/increment'
+      add: 'counter/increment',
     })
   }
 };
