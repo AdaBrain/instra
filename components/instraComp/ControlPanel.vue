@@ -4,10 +4,10 @@
     elevation="7" 
     large
     @click="add"
-    >Follow {{ counter }}</v-btn>
-    <v-btn elevation="7" large>Message</v-btn>
+    >Add {{ counter }}</v-btn>
+    <v-btn elevation="7" large>Minus</v-btn>
     <v-btn elevation="7" large>
-      <v-icon>mdi-chevron-down</v-icon>
+      Reset
     </v-btn>
   </v-row>
 </template>
@@ -30,6 +30,8 @@ export default {
   methods: {
     ...mapMutations({
       add: 'counter/increment',
+      minus: 'counter/decrement',
+      reset: 'counter/reset'
     })
   }
 };
