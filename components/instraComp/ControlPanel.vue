@@ -11,7 +11,7 @@
     Minus</v-btn>
     <v-btn elevation="7" large
     @click="reset"
-    >`
+    >
       Reset
     </v-btn>
   </v-row>

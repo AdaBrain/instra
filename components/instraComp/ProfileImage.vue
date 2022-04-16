@@ -5,7 +5,7 @@
         <img :src="src" alt="Avatar" />
       </v-avatar>
     </div>
-    
+
     <!-- Info Text-box -->
     <div class="text-box" v-for="(item, idx) in info" :key="idx">
       <div class="text-center">
@@ -13,20 +13,21 @@
         {{ item.key }}
       </div>
     </div>
-
   </v-row>
 </template>
 
 <script>
 export default {
   props: ["src"],
-  data: () => ({
+  data() {
+    return {
       info: [
-          {key: "Post", val: "1,992"},
-          {key: "Followers", val: "2.3 M"},
-          {key: "Following", val: "1.5 M"},
-      ]
-  })
+        { key: "Post", val: this.$store.state.counter.post },
+        { key: "Followers", val: "2.3 M" },
+        { key: "Following", val: "1.5 M" },
+      ],
+    };
+  },
 };
 </script>
 

@@ -1,5 +1,6 @@
 export const state = () => ({
-    counter: 0
+    counter: 0,
+    post: 15
 })
 
 export const mutations = {
