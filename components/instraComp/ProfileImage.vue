@@ -9,7 +9,7 @@
     <!-- Info Text-box -->
     <div class="text-box" v-for="(item, idx) in info" :key="idx">
       <div class="text-center">
-        {{ item.val }} <br />
+        {{ Post }} <br />
         {{ item.key }}
       </div>
     </div>
@@ -22,12 +22,17 @@ export default {
   data() {
     return {
       info: [
-        { key: "Post", val: this.$store.state.counter.post },
+        { key: "Post", val: 0},
         { key: "Followers", val: "2.3 M" },
         { key: "Following", val: "1.5 M" },
       ],
     };
   },
+  computed: {
+    Post() {
+      return this.$store.state.counter.post
+    }
+  }
 };
 </script>
 
