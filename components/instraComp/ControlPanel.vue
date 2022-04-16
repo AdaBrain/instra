@@ -5,8 +5,13 @@
     large
     @click="add"
     >Add {{ counter }}</v-btn>
-    <v-btn elevation="7" large>Minus</v-btn>
-    <v-btn elevation="7" large>
+    <v-btn elevation="7" large
+    @click="minus"
+    >
+    Minus</v-btn>
+    <v-btn elevation="7" large
+    @click="reset"
+    >`
       Reset
     </v-btn>
   </v-row>
